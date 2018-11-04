@@ -7,7 +7,6 @@
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 
-float tempo=0;
 int m=6;
 char var='w';
 
@@ -48,7 +47,7 @@ void draw() {
 
   beginShape(POINTS);
   for (int i=0; i<10; i++) //percorrendo as 10 primeiras frequências
-    //obs, se inserir um valor a cima de 30, dependendo do computador pode não conseguir processar
+    //obs, se inserir um valor a cima de 50, dependendo do computador pode não conseguir processar
     //em tempo hábil, causando delay
   {
     cor(i);
@@ -63,11 +62,10 @@ void draw() {
         );
       float x = rad * cos (theta)*50;
       float y = rad * sin (theta)*50;
-      vertex (x, y);
+      vertex (x, y); //liga os pontos e faz o desenho
     }
   }
   endShape();
-  tempo += 0.05;
 }
 
 //superfórmula
