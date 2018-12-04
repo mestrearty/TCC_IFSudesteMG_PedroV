@@ -53,8 +53,8 @@ void draw() {
     cor(i);
     for (float theta = 0; theta <= 2 * PI; theta +=0.01) {
       float rad = sFormula(theta, 
-        2, //a - X
-        2, //b - Y
+        2, //a - X - Primeiro Conjunto de Pontos
+       	2, //b - Y - Segundo Conjunto de Pontos
         m, //m - pontos de divisão do poligono
         1, //n1 suavidade das pontas
         sin(fft.getBand(i)/2)*0.5+0.5, //n2 
